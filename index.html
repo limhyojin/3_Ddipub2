@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>하루 ASMR</title>
+	<style type="text/css">
+		.you {transform: rotate(90deg);background: red;position: absolute;}
+		#your {color:black;}
+		.im {display:block;margin:0;width:250px; height: 400px; float:left; size:cover; margin-top:200px;opacity: 0.3;}
+		#time{position:absolute; font-weight: 600; font-size: 25px;top:120px;}
+		#aaa{transform: rotate(-90deg); display: block; background:green; position: absolute; left:160px; top:500px;}
+		#pl{position:absolute; font-size: 50px; top:600px; font-weight: 900;
+		z-index: 1;}
+		#pl:hover{background:#999999;}
+		#bg{position:absolute; font-size: 50px; top:600px; left:260px;font-weight: 900; z-index: 1;}
+		#bg:hover{background: #999999;}
+		.bgc:hover{height: 50px;}
+		#back{height: 1000px;}
+		.timetable{position: absolute; top:125px; font-weight:600; color:#999999;}
+		#subt{}
+		#typt{left:260px;}
+		#bit{left:510px;}
+		#bot{left:760px;}
+		#mot{left:1010px;}
+		#tab{position:absolute;top:125px;left:1400px; font-weight: 600;font-size: 16px;}
+		@keyframes ho {
+			to{width:500px;}
+		}
+		@keyframes no {
+			to{width:250px;}
+		}
+
+	</style>
+</head>
+
+<body id="back">
+	
+	<div class="you">
+	<p id="your"></p>
+</div>
+<div id="thing">
+	<p class="timetable" id=subt>07:00 ~<br>10:00</p>
+	<img src="subway.jpg" id="sub" class="im">
+	<audio src="subways.wav" loop id="subs"></audio>
+	<p id="pl">Asmr</p>
+	<div class="bgc"></div>
+	<p id="bg">bgm</p>
+	<audio src="lost.wav" loop id="los"></audio>
+
+	<p class="timetable" id=typt>11:00 ~<br>17:00</p>
+	<img src="typing.jpg" id="ty" class="im">
+	<audio src="typings.wav" loop id="typs"></audio>
+
+	<p class="timetable" id=bit>17:00 ~<br>19:00</p>
+	<img src="love.jpg" id="lo" class="im">
+	<audio src="bikes.wav" loop id="bis"></audio>
+
+	<p class="timetable" id=bot>20:00 ~<br>22:00</p>
+	<img src="book.jpg" id="bo" class="im">
+	<audio src="books.wav" loop id="bos"></audio>
+
+	<p class="timetable" id=mot>23:00 ~<br>06:00</p>
+	<img src="moon.jpg" id="mo" class="im">
+	<audio src="moons.wav" loop id="mos"></audio>
+	<p id=tab>Time Table</p>
+</div>
+
+
+	<div id="time"></div>
+	<script type="text/javascript">
+		
+
+		var d= new Date(); //if(50<i && i<60) 50초과 60 미만
+		var losstate="off"
+
+		bg.onclick=function(){
+			if(losstate=="off"){
+				los.play();
+				losstate="on";
+			}else{
+				los.pause();
+				losstate="off"
+			}
+	}
+
+		
+		if(7<d.getHours() && d.getHours()<=10) {
+				subt.style.opacity="0";
+				sub.style.opacity="1";
+				time.style.left="10px"
+				pl.onclick = function(){
+				sub.style.animation="ho 2s 1 forwards";
+				subs.volume = 0.5;
+				subs.play();
+				back.style.backgroundColor ="#a49888";
+				bot.style.opacity="0";
+				bit.style.opacity="0";
+				typt.style.opacity="0";
+				subt.style.opacity="0";
+				mot.style.opacity="0";
+			}
+			}
+		else if(10<d.getHours() && d.getHours()<=17){
+				typt.style.opacity="0";
+				time.style.left="260px"
+				ty.style.opacity="1";
+				pl.onclick = function(){
+				ty.style.animation="ho 2s 1 forwards";
+				typs.volume = 0.5;
+				typs.play();
+				back.style.backgroundColor ="#5b452f";
+				bot.style.opacity="0";
+				bit.style.opacity="0";
+				typt.style.opacity="0";
+				subt.style.opacity="0";
+				mot.style.opacity="0";
+			}
+		}
+		else if(17<d.getHours() && d.getHours()<=19){
+				bit.style.opacity="0";
+				time.style.left="510px";
+				lo.style.opacity="1";
+				pl.onclick = function(){
+				lo.style.animation="ho 2s 1 forwards";
+				bis.volume = 0.5;
+				bis.play();
+				back.style.backgroundColor ="#703c32";
+				bot.style.opacity="0";
+				bit.style.opacity="0";
+				typt.style.opacity="0";
+				subt.style.opacity="0";
+				mot.style.opacity="0";
+			}
+		}
+		else if(19<d.getHours() && d.getHours()<=21){
+			bot.style.opacity="0";
+				time.style.left="760px";
+				bo.style.opacity="1";
+				pl.onclick = function(){
+				bo.style.animation="ho 2s 1 forwards";
+				bos.volume = 1;
+				bos.play();
+				back.style.backgroundColor ="#18212a";
+				pl.style.color="white";
+				time.style.color ="white";
+				bot.style.opacity="0";
+				bit.style.opacity="0";
+				typt.style.opacity="0";
+				subt.style.opacity="0";
+				mot.style.opacity="0";
+				tab.style.color="white";
+			}
+				
+		}
+		else{	mot.style.opacity="0";
+				mo.style.opacity="1";
+				time.style.left="1010px";
+				pl.onclick = function(){
+				mos.volume = 1;
+				mos.play();
+				back.style.backgroundColor ="black";
+				pl.style.color="white";
+				time.style.color="white";
+				tab.style.color="white";
+				mo.style.animation="ho 2s 1 forwards";
+				bot.style.opacity="0";
+				bit.style.opacity="0";
+				typt.style.opacity="0";
+				subt.style.opacity="0";
+				mot.style.opacity="0";
+			}
+		}
+		
+		if(d.getHours()<10){
+			hh= "0" + d.getHours()
+		}
+		else{
+			hh=d.getHours()
+		}
+		if(d.getMinutes()<10){
+			mm="0" + d.getMinutes()
+		}
+		else{
+			mm=d.getMinutes()
+		}
+		time.innerHTML = "SEOUL<br>" + hh + ":" + mm;  
+	</script>
+
+
+</body>
+
+</html>
